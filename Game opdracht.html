@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+	<meta charset = "UTF-8">
+	<title>Game</title>
+</head>
+<body>
+	<script type = "text/javascript">
+
+		var wrongAnswer = "You need to type one of the options that were given";
+
+		alert("Hello and welcome to New York. You are a 25 year old male that moved to New York for new opportunities and you were a marine but lost your job due to drugging yourself while on a mission. Lets get started.");
+
+
+	while (Direction != "coffeeshop" && Direction != "gunshop") {
+		var Direction = prompt ("Would you like to walk in the direction of the gunshop or the coffeeshop ? type gunshop/coffeeshop.");
+		Direction = Direction.toLowerCase();
+		if (Direction != "coffeeshop" && Direction != "gunshop") {
+		alert(wrongAnswer);
+		}
+	}
+
+		if (Direction == "coffeeshop"){	
+			alert("You have been robbed, your weed is gone and you only have 10 dollars left that u hid in your sock.");
+
+			while (Direction != "fake" && Direction != "beg"){
+			Direction = prompt ("Would you like to walk into the bank and fake having a gun or would you beg people for money ? type fake/beg.");
+			Direction = Direction.toLowerCase();
+			if (Direction != "fake" && Direction != "beg"){
+			alert(wrongAnswer);
+		}
+	}
+			if (Direction == "fake"){
+				alert("Police have caught you and you've been locked up, game over.");
+			}
+
+			else if (Direction == "beg"){
+				alert("You've gathered 50 dollars by begging people for money.");
+				while (Direction != "appartment" && Direction != "suit"){
+				Direction = prompt ("Would you like you to buy a 30 dollar a month appartment or use the money on a cheap suit to try and get a job ?type appartment/suit.");
+				Direction = Direction.toLowerCase();
+				if (Direction != "appartment" && Direction != "suit"){
+				alert(wrongAnswer);
+			}
+			}
+				if (Direction == "suit"){
+					alert("You applied for a job at a company that designes websites, as you coulnd't code you have not been hired and with no money left and wearing a suit, the civilians that walked by woulnd't believe you need money, it's game over.");
+				}
+
+			else if (Direction == "appartment"){
+				alert("You have bought an cheap appartment and lucky for you the previous owners forgot their wallet, you have got + 60 dollars wich you can use for rent.");
+				while (Direction != "gang" && Direction != "police"){
+				Direction = prompt ("Would you like to join a gang and start dealing or would you like to apply for a job at the police department ? type gang/police.");
+				Direction = Direction.toLowerCase();
+				if (Direction != "gang" && Direction != "police"){
+				alert(wrongAnswer);
+				}
+			}
+				if (Direction == "gang"){
+					alert("When you were dealing drugs a rival gang member spotted you and shot you to death, game over.");
+					document.write("You were so close!");
+				}
+
+				else if (Direction == "police"){
+					alert("The police hired you for the skills you had in the army, they are keeping a close eye on you because you did still drug yourself.");
+					while (Direction != "yourself" && Direction != "partner"){
+					Direction = prompt ("The police sends you on your first mission to a member of a drug gang who shot a member of a rival gang, you arrive and see the man aiming a gun at your partner that was send with you and standing besides you in the warehouse where the man was hiding, the man shoots, what do you do take the bullet or let your partner get shot and possibly let him die ? type yourself/partner.");
+					Direction = Direction.toLowerCase();
+					if (Direction != "yourself" && Direction != "partner"){
+						alert(wrongAnswer);
+					}
+				}
+					if (Direction == "partner"){
+						alert("You let your partner die and didn't catch the killer, police suspect you let him go. You got kicked out of the police department and you cannot pay the rent for your appartment anymore. Game over.");
+					}
+
+					else if (Direction == "yourself"){
+						alert("You dove in front of your partner to take the bullet and it only hit your leg which isn't fatal, the man is out of ammo and trips over a wire in the warehouse where your partner arrests him. You have gotten a medal for courage and got a raise. Game won.");
+						document.write ("Congratulations you have beaten the game. Well done !");
+					}
+				}
+			}
+		}
+	}
+			else if (Direction == "gunshop"){
+				while (Direction != "guns" && Direction != "money"){
+				Direction = prompt ("You got into the gunshop and consider buying 2 guns or save your money, what would you do ? type guns/money");
+				Direction = Direction.toLowerCase();
+				if (Direction != "guns" && Direction != "money"){
+					alert(wrongAnswer);
+				}
+			}
+				if (Direction == "money"){
+					alert("You saved your money and as soon as you leave the gunshop you get robbed and lose all your money, game over. ");
+				}
+				else if (Direction == "guns"){
+					alert("You bought the 2 guns but with no money left you have no other option than to get into crime.");
+					while (Direction != "bank" && Direction != "people"){
+					Direction = prompt ("Would you like to rob a small bank or rob people on the street ? type bank/people.");
+					Direction = Direction.toLowerCase();
+					if (Direction != "bank" && Direction != "people"){
+					alert(wrongAnswer);
+				}
+				}
+					if (Direction == "bank"){
+						alert("You unsuccesfully robbed a small bank on your own and got locked up for attempted robbery, game over.");
+					}
+					else if (Direction == "people"){
+						Direction = prompt ("How many people are you robbing ?");
+						Direction = Direction.toLowerCase();
+						if (Direction > 3){
+							alert("You robbed too many people and got caught. Game over.");
+						}
+
+						else if (Direction <= 3){
+							alert("You robbed 150 dollars in total and decided to deposit it to a bank. After doing that the police got suspiscious and are keeping an eye on you.");
+							while (Direction != "steal" && Direction != "job"){
+							Direction = prompt ("After depositing 150 dollars what would you like to do with that money, steal more the next day or stay low and find a job ? type steal/job.");
+							Direction = Direction.toLowerCase();
+							if (Direction != "steal" && Direction != "job"){
+					alert(wrongAnswer);
+				}
+			}
+							if (Direction == "steal"){
+								alert("Police were keeping an eye on you and have you caught you robbing people, game over.");
+							}
+
+							else if (Direction == "job"){
+								alert("You have been hired for a job at the scouts and they pay you minimum wage.");
+								while (Direction != "scouts" && Direction != "sports"){
+								Direction = prompt ("Do you want to keep working at the scouts or would you rather go for a career in sports ? type scouts/sports.");
+								Direction = Direction.toLowerCase();
+								if (Direction != "scouts" && Direction != "sports"){
+					alert(wrongAnswer);
+				}
+			}
+								if (Direction == "scouts"){
+									alert("The scouts kicked you out because you used a childs injectiontube to drug yourself with. Game over.");
+								}
+
+								else if (Direction == "sports"){
+									while (Direction != "football" && Direction != "basketball"){
+									Direction = prompt ("Would you like to start a career in football or in basketball ? type football/basketball");
+									Direction == Direction.toLowerCase();
+									if (Direction != "football" && Direction != "basketball"){
+					alert(wrongAnswer);
+				}
+			}
+									if (Direction == "football"){
+										alert("You couldn't play football that good and failed in pursuing your career. Game over.");
+									}
+
+									else if (Direction == "basketball"){
+										alert("You were trained as a marine and you were performing really well in basketball matches, you became a proffesional and you became the new Kobe, people call you Kobe JR. Game won.");
+										document.write("Congratulations you have beaten the game. Well done !");
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+	</script>
+</body>
+</html>
